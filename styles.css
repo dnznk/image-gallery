@@ -1,0 +1,18 @@
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.img-gallery > img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  transition: scale 350ms ease, opacity 350ms linear;
+}
+
+.img-gallery:has(img:hover) img:not(:hover) {
+  scale: 0.8;
+  opacity: 0.7;
+}
